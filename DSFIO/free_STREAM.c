@@ -14,9 +14,12 @@
 /* Include dsfio.h */
 #include "dsfio.h"
 
+/* free DSD_STREAM struct */
 void free_STREAM(DSD_STREAM *stream){
+    /* free DSD stream Data */
     free(stream->DSDL);
     free(stream->DSDR);
 
+    /* free struct */
     free(stream);
 }

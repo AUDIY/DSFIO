@@ -16,9 +16,9 @@
 
 /* Free DSD struct */
 void free_DSF(DSF *dsf){
-    // Free DSD data
+    /* Free DSD data */
     free(dsf->data.data);
 
-    // Free DSD struct
+    /* Free DSD struct */
     free(dsf);
 }

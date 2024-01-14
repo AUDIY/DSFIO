@@ -16,12 +16,12 @@
 
 /* DSD struct allocation */
 DSF *alloc_DSF(void){
-    // Memory Allocation
+    /* Memory Allocation */
     DSF *dsf = (DSF *)malloc(sizeof(DSF));
 
-    // DSD data point to NULL
+    /* DSD data point to NULL */
     dsf->data.data = NULL;
 
-    // Return Allocated DSD struct
+    /* Return Allocated DSD struct */
     return dsf;
 }
