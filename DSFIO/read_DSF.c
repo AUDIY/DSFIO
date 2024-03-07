@@ -100,7 +100,6 @@ void read_DSF(DSF *dsf, char *filename){
                     printf("Program ends forcibly.\n");
                     free_DSF(dsf);
                     exit(1);
-                    break;
             }
 
             /* For Debug. */
