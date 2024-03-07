@@ -17,6 +17,17 @@
 void read_DSF(DSF *dsf, char *filename){
     FILE *fp;
     uint8_t *data_ptr;
+    uint8_t LSBdata[256];
+
+    /* Make LSB data table */
+    for (int i = 0; i < 256; i++) {
+
+        LSBdata[i] = 0;
+
+        for (int j = 0; j < 8; j++) {
+            LSBdata[i] |= ((i >> j) & 1) << (7-j);
+        }
+    }
 
     /* Open the DSF File */
     fp = fopen(filename, "rb");
@@ -73,6 +84,24 @@ void read_DSF(DSF *dsf, char *filename){
        for (uint64_t i = 0; i < data_size; i++) {
             /* Store 8 samples */
             fread(dsf->data.data, 1, 1, fp);
+
+            switch (dsf->fmt.bitsPerSample) {
+                case 1:
+                    /* Store the data as LSB first. */
+                    *dsf->data.data = LSBdata[*dsf->data.data];
+                    break;
+
+                case 8:
+                    /* Store the data as MSB first. */
+                    break;
+
+                default:
+                    printf("Error!: Invalid Bits per sample.\n");
+                    printf("Program ends forcibly.\n");
+                    free_DSF(dsf);
+                    exit(1);
+                    break;
+            }
 
             /* For Debug. */
             //printf("%lld: %x\n", i, *dsd->data.data);
