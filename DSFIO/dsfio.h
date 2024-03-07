@@ -38,7 +38,7 @@ typedef struct {
     uint32_t bitsPerSample; /* Quantization Bits (Little Endian) */
     uint64_t sampleCount;   /* samplesPerSec * [Playback time (sec)] (Little Endian) */
     uint32_t blockSize;     /* 4096 */
-    //int32_t RSVD;         /* Fill Zero(0x00, 0x00, 0x00, 0x00) */
+    //uint32_t RSVD;         /* Fill Zero(0x00, 0x00, 0x00, 0x00) */
 } FMT;
 
 /* DATA chunk */
