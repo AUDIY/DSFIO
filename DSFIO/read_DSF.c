@@ -93,6 +93,7 @@ void read_DSF(DSF *dsf, char *filename){
 
                 case 8:
                     /* Store the data as MSB first. */
+                    //*dsf->data.data = LSBdata[*dsf->data.data];
                     break;
 
                 default:
