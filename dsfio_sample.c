@@ -23,7 +23,8 @@ int main(void) {
 
     DSF *dsf;
     DSD_STREAM *stream;
-    char *filename = "PCM_Sine_1kHz_0dB_LR_DSD64.dsf";
+    char *filename = "Sine_1kHz_0dB_LR_DSD64_swap.dsf";
+    //char *filename = "Sine_1kHz_0dB_LR_DSD64.dsf";
     uint64_t i;
     uint64_t j;
     uint8_t left, right;
@@ -36,12 +37,12 @@ int main(void) {
     shape_STREAM(dsf, stream);
 
     for (i = 0; i < (dsf->data.chunkSize - 12)/2; i++){
-        printf("%lld: 0x%2x, 0x%2x\n", i, *stream->DSDL, *stream->DSDR);
-        //printf("%lld: ", i);
-        //putb(*stream->DSDL);
-        //printf(", ");
-        //putb(*stream->DSDL);
-        //printf("\n");
+        //printf("%lld: 0x%2x, 0x%2x\n", i, *stream->DSDL, *stream->DSDR);
+        printf("%lld: ", i);
+        putb(*stream->DSDL);
+        printf(", ");
+        putb(*stream->DSDL);
+        printf("\n");
 
         /*
         for (j = 8; j > 0; j--) {
