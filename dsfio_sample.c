@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <math.h>
+#include <limits.h>
 
 /* Include prototype header file */
 #include "dsfio.h"
@@ -23,11 +24,9 @@ int main(void) {
 
     DSF *dsf;
     DSD_STREAM *stream;
-    char *filename = "Sine_1kHz_0dB_LR_DSD64_swap.dsf";
-    //char *filename = "Sine_1kHz_0dB_LR_DSD64.dsf";
-    uint64_t i;
-    uint64_t j;
-    uint8_t left, right;
+    //char *filename = "Sine_1kHz_0dB_LR_DSD64_swap.dsf";
+    char *filename = "Sine_1kHz_0dB_LR_DSD64.dsf";
+    //uint8_t left, right;
 
     dsf = alloc_DSF();
     stream = alloc_STREAM();
@@ -36,16 +35,16 @@ int main(void) {
     read_DSF(dsf, filename);
     shape_STREAM(dsf, stream);
 
-    for (i = 0; i < (dsf->data.chunkSize - 12)/2; i++){
+    for (uint64_t i = 0; i < (dsf->data.chunkSize - 12)/2; i++){
         //printf("%lld: 0x%2x, 0x%2x\n", i, *stream->DSDL, *stream->DSDR);
-        printf("%lld: ", i);
+        printf("%lu: ", i);
         putb(*stream->DSDL);
         printf(", ");
         putb(*stream->DSDL);
         printf("\n");
 
         /*
-        for (j = 8; j > 0; j--) {
+        for (uint64_t j = 8; j > 0; j--) {
             left = *stream->DSDL / (int)(pow(2, j-1));
             right = *stream->DSDR / (int)(pow(2, j-1));
             //printf("%1d, %1d\n", left, right);
