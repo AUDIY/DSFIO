@@ -17,13 +17,10 @@
 void read_DSF(DSF *dsf, char *filename){
     FILE *fp;
     uint8_t *data_ptr;
-    uint8_t LSBdata[256];
+    uint8_t LSBdata[256] = {0};
 
     /* Make LSB data table */
     for (int i = 0; i < 256; i++) {
-
-        LSBdata[i] = 0;
-
         for (int j = 0; j < 8; j++) {
             LSBdata[i] |= ((i >> j) & 1) << (7-j);
         }
@@ -116,3 +113,4 @@ void read_DSF(DSF *dsf, char *filename){
     /* Close the file */
     fclose(fp);
 }
+
