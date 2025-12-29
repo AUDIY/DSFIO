@@ -2,7 +2,7 @@
 // Print DSD stream by 1bit.
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -66,3 +66,4 @@ void printb(uint8_t v) {
 void putb(uint8_t v) {
   putchar('0'), putchar('b'), printb(v);
 }
+
