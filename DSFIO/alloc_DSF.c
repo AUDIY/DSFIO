@@ -1,7 +1,7 @@
 /* alloc_DSD.c */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -25,3 +25,4 @@ DSF *alloc_DSF(void){
     /* Return Allocated DSD struct */
     return dsf;
 }
+
