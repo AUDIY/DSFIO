@@ -1,7 +1,7 @@
 /* free_STREAM.c */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -23,3 +23,4 @@ void free_STREAM(DSD_STREAM *stream){
     /* free struct */
     free(stream);
 }
+
