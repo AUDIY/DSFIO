@@ -1,7 +1,7 @@
 /* shape_STREAM.c */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -56,3 +56,4 @@ void shape_STREAM(DSF *dsf, DSD_STREAM *stream){
     stream->DSDR = dsdr_ptr;
     dsf->data.data = data_ptr;
 }
+
