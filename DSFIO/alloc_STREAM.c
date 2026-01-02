@@ -1,7 +1,7 @@
 /* alloc_STREAM.c */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -25,3 +25,4 @@ DSD_STREAM *alloc_STREAM(void){
     /* Return Allocated struct pointer. */
     return stream;
 }
+

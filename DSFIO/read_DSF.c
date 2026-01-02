@@ -1,7 +1,7 @@
 /* read_DSD.c */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -113,4 +113,5 @@ void read_DSF(DSF *dsf, char *filename){
     /* Close the file */
     fclose(fp);
 }
+
 

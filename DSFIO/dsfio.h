@@ -1,7 +1,7 @@
 /* dsfio.h */
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -77,3 +77,4 @@ void shape_STREAM(DSF *dsf, DSD_STREAM *stream); /* shape_STREAM.c */
 
 /* Close include guard */
 #endif
+

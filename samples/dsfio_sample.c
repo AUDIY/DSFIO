@@ -2,7 +2,7 @@
 // Print DSD stream by 8bit.
 
 /*----------------------------------------------------
-  Copyright (c) 2024 - 2025 AUDIY
+  Copyright (c) 2024 - 2026 AUDIY
   Released under the MIT license
   https://opensource.org/licenses/mit-license.php
 ----------------------------------------------------*/
@@ -63,4 +63,5 @@ int main(void) {
 
     return 0;
 }
+
 
